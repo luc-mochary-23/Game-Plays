@@ -9,12 +9,6 @@ app.get('/', function(req,res){
   res.sendFile('/public/html/home.html');
 })
 
-app.use(function(err){
-	console.log(err);
-	res.send("errrrrrrrr")
-})
-
-
 app.listen( process.env.PORT || 3000,function(){
 	console.log('server running on 3000');
 })
