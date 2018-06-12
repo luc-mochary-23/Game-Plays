@@ -3,9 +3,10 @@ var app = express();
 var path = require('path');
 
 
-app.use( express.static( path.join(__dirname,'/public') ) );
+// app.use( express.static( path.join(__dirname,'/public') ) );
 
 app.get('/', function(req,res){
+	
 	var options = {
 	    root: __dirname + '/public/html/',
 	    dotfiles: 'deny',
@@ -18,6 +19,11 @@ app.get('/', function(req,res){
   var fileName = req.params.name;
 
   res.sendFile( 'home.html', options);
+})
+
+app.use(function(err){
+	console.log(err);
+	res.send("errrrrrrrr")
 })
 
 
