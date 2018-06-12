@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/luc-mochary-23/Game-Plays.git"
   },
+  "engines": {
+    "node": "8.11.1"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
