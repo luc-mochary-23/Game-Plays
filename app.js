@@ -3,22 +3,22 @@ var app = express();
 var path = require('path');
 
 
-// app.use( express.static( path.join(__dirname,'/public') ) );
+app.use( express.static( path.join(__dirname,'/public') ) );
 
 app.get('/', function(req,res){
 	
-	var options = {
-	    root: __dirname + '/public/html/',
-	    dotfiles: 'deny',
-	    headers: {
-	        'x-timestamp': Date.now(),
-	        'x-sent': true
-	    }
-  	};
+	// var options = {
+	//     root: __dirname + ,
+	//     dotfiles: 'deny',
+	//     headers: {
+	//         'x-timestamp': Date.now(),
+	//         'x-sent': true
+	//     }
+ //  	};
 
-  var fileName = req.params.name;
+ //  var fileName = req.params.name;
 
-  res.sendFile( 'home.html', options);
+  res.sendFile('/public/html/home.html');
 })
 
 app.use(function(err){
